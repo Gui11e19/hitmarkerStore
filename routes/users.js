@@ -11,4 +11,4 @@ const userController = require('../controllers/UserController');
   router.put('/:id',userController.update);
   //eliminando usarios
   router.delete('/:id',userController.delete);
-module.exports = router; 
+module.exports = router;

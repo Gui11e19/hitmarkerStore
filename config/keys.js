@@ -1,11 +1,6 @@
-
-let database = "onlineStore";
-let port = "27017";
-let host = "localhost";
-let uri = `mongodb://${host}:${port}/${database}`
-
+/*Contiene los string de conexion a la base de datos */
 module.exports = {
     mongodb:{
-        URI:'
+        URI:'mongodb://localhost:27017/admTareas'
     }
 }
