@@ -53,5 +53,9 @@ router.get('/register', function(req, res) {
 router.get('/reset_pass', function(req, res) {
   res.render('reset_pass');
 });
+router.get('/home1', function(req, res) {
+  res.render('home1');
+});
+
 
 module.exports = router;
