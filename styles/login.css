@@ -1,0 +1,64 @@
+body{
+    background: url(https://image.freepik.com/vector-gratis/fondo-transparente-videojuegos_6997-111.jpg);
+    background-repeat: no-repeat;
+  	background-size: cover;
+}
+
+.main{
+    margin:0 auto;
+    margin-top:50%;
+    padding: 0;
+}
+
+.contenido{
+    background-color: #3b4652;
+    padding: 0 20px;
+    box-shadow: 5px 5px 5px black;
+}
+
+.logo{
+    margin-top: -50px;
+	margin-bottom: 35px;
+	padding-top: 30px;
+}
+
+.logo img{
+	width: 100px; 
+	height: 100px;
+    box-shadow: 5px 5px 5px 5px #848484;
+	border-radius: 50%;	
+}
+
+.form-group input{
+    height: 42px;
+    font-size: 18px;
+    border:0;
+    padding-left: 54px;
+    border-radius: 5px;
+}
+
+.form-group::before{
+    font-family: "Font Awesome\ 5 Free";
+    position: absolute;
+    left: 28px;
+    font-size: 22px;
+    padding-top:4px;
+}
+
+.form-group#user::before{
+    content: "\f007";
+}
+
+.form-group#contraseña::before{
+    content: "\f023";
+}
+
+button{
+    width: 60%;
+    margin: 5px 0 25px;
+}
+
+.links{
+	padding: 5px 0;
+	justify-content: space-between;
+}
