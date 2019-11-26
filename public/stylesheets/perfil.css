@@ -1,0 +1,54 @@
+body{
+    background: url(https://image.freepik.com/vector-gratis/fondo-transparente-videojuegos_6997-111.jpg);
+    padding-top: 150px;      
+}
+
+
+header{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding-bottom: 30px;
+    padding-left: 35px;
+}
+
+.emp-profile{
+    padding: 3%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    background: #494B4D;
+}
+.profile-img{
+    text-align: center;
+}
+.profile-img img{
+    width: 70%;
+    height: 100%;
+}
+.profile-img .file {
+    position: relative;
+    overflow: hidden;
+    margin-top: -20%;
+    width: 70%;
+    border: none;
+    border-radius: 0;
+    font-size: 15px;
+    background: #212529b8;
+}
+
+.profile-edit-btn{
+    border: none;
+    border-radius: 1.5rem;
+    width: 70%;
+    padding: 2%;
+    font-weight: 600;
+    background:#212529b8;
+    color: white;
+    cursor: pointer;
+}
+
+.profile-head{
+    color: 
+    white;
+    font-size: larger;
+}
