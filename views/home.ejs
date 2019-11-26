@@ -4,10 +4,141 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="/stylesheets/home.css">
+    
     <title>Document</title>
 </head>
 <body>
- <p>holi</p>
+  <div class="container">
+    <nav class="navbar">
+      <div id="menu_header">
+        <div class="logo-header">
+            <img class="logo" src="https://images.vexels.com/media/users/3/143097/isolated/preview/5a631e30cd478440c20da8c5578dd77c-discos-con-logo-circular-by-vexels.png" alt="img_logo">
+          <span class="site-name">Hitmarker</span>
+        </div>
+        <!---->
+        <ul class="menu">
+          <li id="Home"><a href="/home">Home</a></li>
+          <li id="Articulos"><a href="/articulos">Articulos</a></a></li>
+          <li id="About us"><a href="/about">About us</a></li>
+          <li id="Help"><a href="/help">Help</a></li>
+        </ul>
+        <!---->
+        <ul class="nav justify-content-end">
+          <li class="nav-item">
+            <a href="/carro">
+              <img src="data:image/png;base64,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" alt="carro_de_compras" class="img-thumbnail">
+            </a>
+          </li>
+          <li class="nav-item">
+              <a href="/perfil">
+                <img src="data:image/png;base64,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" alt="usuario" class="img-thumbnail">
+              </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="wrap">
+        <h1>Venta de VideoJuegos Hitmarker</h1>
+            <section class="products-list">
+                <div class="product-item">
+                    <div class="card" style="width: 15rem;">
+                        <div class="imagen">
+                        <img src="https://swordshield.pokemon.com/assets/img/common/packshot/en-us/packshot_sword.png" class="card-img-top">
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">Juego1</h5>
+                          <p class="text">0.00$</p>
+                          <a href="/articulos" class="btn btn-primary">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="card" style="width: 15rem;">
+                        <div class="imagen">
+                        <img src="https://swordshield.pokemon.com/assets/img/common/packshot/en-us/packshot_sword.png" class="card-img-top">
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">Juego1</h5>
+                          <p class="text">0.00$</p>
+                          <a href="/articulos" class="btn btn-primary">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="card" style="width: 15rem;">
+                        <div class="imagen">
+                        <img src="https://swordshield.pokemon.com/assets/img/common/packshot/en-us/packshot_sword.png" class="card-img-top">
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">Juego1</h5>
+                          <p class="text">0.00$</p>
+                          <a href="/articulos" class="btn btn-primary">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="card" style="width: 15rem;">
+                        <div class="imagen">
+                        <img src="https://swordshield.pokemon.com/assets/img/common/packshot/en-us/packshot_sword.png" class="card-img-top">
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">Juego1</h5>
+                          <p class="text">0.00$</p>
+                          <a href="/articulos" class="btn btn-primary">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="card" style="width: 15rem;">
+                        <div class="imagen">
+                        <img src="https://swordshield.pokemon.com/assets/img/common/packshot/en-us/packshot_sword.png" class="card-img-top">
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">Juego1</h5>
+                          <p class="text">0.00$</p>
+                          <a href="/articulos" class="btn btn-primary">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="card" style="width: 15rem;">
+                        <div class="imagen">
+                        <img src="https://swordshield.pokemon.com/assets/img/common/packshot/en-us/packshot_sword.png" class="card-img-top">
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">Juego1</h5>
+                          <p class="text">0.00$</p>
+                          <a href="/articulos" class="btn btn-primary">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="card" style="width: 15rem;">
+                        <div class="imagen">
+                        <img src="https://swordshield.pokemon.com/assets/img/common/packshot/en-us/packshot_sword.png" class="card-img-top">
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">Juego1</h5>
+                          <p class="text">0.00$</p>
+                          <a href="/articulos" class="btn btn-primary">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="card" style="width: 15rem;">
+                        <div class="imagen">
+                        <img src="https://swordshield.pokemon.com/assets/img/common/packshot/en-us/packshot_sword.png" class="card-img-top">
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">Juego1</h5>
+                          <p class="text">0.00$</p>
+                          <a href="/articulos" class="btn btn-primary">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
 </body>
 </html>
