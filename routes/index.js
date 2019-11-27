@@ -30,10 +30,6 @@ router.get('/help', function(req, res) {
   res.render('help');
 });
 
-router.get('/index', function(req, res) {
-  res.render('index');
-});
-
 router.get('/login', function(req, res) {
   res.render('login');
 });
@@ -53,9 +49,12 @@ router.get('/register', function(req, res) {
 router.get('/reset_pass', function(req, res) {
   res.render('reset_pass');
 });
-router.get('/home1', function(req, res) {
-  res.render('home1');
+
+router.get('/homet', function(req, res) {
+  res.render('homet');
 });
+
+
 
 
 module.exports = router;
