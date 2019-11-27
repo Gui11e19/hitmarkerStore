@@ -1,4 +1,5 @@
 const Mongoose= require ("mongoose");
+const bcrypt = require('bcrypt-nodejs'); // encriptar password
 
 
 const UserRegisterSchema = Mongoose.Schema({
@@ -30,15 +31,5 @@ const ClienteSchema = Mongoose.Schema({
     nacionalidad: String
 });
 
+
 module.exports = Mongoose.model("cliente", ClienteSchema);
-
-
-
-const EmployeeSchema = Mongoose.Schema({
-    nombre: String,
-    correo: String,
-    contraseña: String
-});
-
-module.exports = Mongoose.model("empleado", EmployeeSchema);
-
