@@ -38,30 +38,21 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav text-uppercase ml-auto">
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#services">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#portfolio">Articulos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#team">Help</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="/login">Login</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="/register">Register</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="/carro">Carro</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="/perfil">Perfil</a>
-            </li>
+              <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="/home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <%if(user){%>
+                  <a class="nav-link js-scroll-trigger" href="/carro">Carro</a><%}%>
+                </li>
+                <li class="nav-item">
+                  <a  href="#team">
+                    <%if(user){%><p class="nav-link js-scroll-trigger"><%=user.username%></p><%}%>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="/logout">Logout</a>
+                </li>
           </ul>
         </div>
       </div>
@@ -97,7 +88,7 @@
                                     <label>DUI: </label>
                                 </div>
                                 <div class="col-md-6">
-                                    <p>Kathia</p>
+                                    <p><%=user.dui%></p>
                                 </div>
                             </div>
                         <div class="row">
@@ -105,7 +96,7 @@
                                     <label>Nombre: </label>
                                 </div>
                                 <div class="col-md-6">
-                                    <p>Kathia</p>
+                                    <p><%=user.username%></p>
                                 </div>
                             </div>
                             <div class="row">
@@ -113,7 +104,7 @@
                                     <label>Email: </label>
                                 </div>
                                 <div class="col-md-6">
-                                    <p>kathiagui@gmail.com</p>
+                                    <p><%=user.correo%></p>
                                 </div>
                             </div>
                             <div class="row">
@@ -121,7 +112,7 @@
                                         <label>Direccion: </label>
                                     </div>
                                     <div class="col-md-6">
-                                        <p>kathiagui@gmail.com</p>
+                                        <p><%=user.direccion%></p>
                                     </div>
                                 </div>
                             <div class="row">
@@ -129,7 +120,7 @@
                                     <label>Fecha de Nacimiento: </label>
                                 </div>
                                 <div class="col-md-6">
-                                    <p>22/12/1992</p>
+                                    <p><%=user.fecha_nac%></p>
                                 </div>
                             </div>
                             <div class="row">
@@ -137,7 +128,7 @@
                                     <label>Tarjeta de credito: </label>
                                 </div>
                                 <div class="col-md-6">
-                                    <p>kathiagui@gmail.com</p>
+                                    <p><%=user.card%></p>
                                 </div>
                             </div>
                             <div class="row" style="display: none">
@@ -145,7 +136,7 @@
                                     <label>Rol: </label>
                                 </div>
                                 <div class="col-md-6">
-                                    <p>kathiagui@gmail.com</p>
+                                    <p><%=user.rol%></p>
                                 </div>
                             </div>
       </div>
