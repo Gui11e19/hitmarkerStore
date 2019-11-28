@@ -3,11 +3,14 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const passport = require('passport') // libreria para el manejo de la autenticacion
+const session = require('express-session'); // libreria para el manejo de sesiones
+const flash = require('connect-flash');
+
+require('./passport/local-auth');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
 var tareasRouter = require('./routes/tareas')
-
 
 var app = express();
 //abriendo la conexion a mongodb
@@ -22,18 +25,30 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
+app.use(session({     
+  secret: 'hola mundo',     
+  resave: false,     
+  saveUninitialized: false 
+}));
 
-app.use('/users', usersRouter);
+app.use(flash());
+app.use(passport.initialize());
+app.use(passport.session());
+
+app.use((req,res,next)=>{
+  app.locals.signupMessage= req.flash('signupMessage');
+  app.locals.signinMessage= req.flash('signinMessage');     
+  app.locals.user = req.user;     
+  next(); 
+})
+
+app.use('/', indexRouter);
 app.use('/tareas',tareasRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
 });
-
-//Render the views
-
 
 // error handler
 app.use(function(err, req, res, next) {
