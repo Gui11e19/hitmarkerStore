@@ -24,6 +24,12 @@ router.get('/help', function(req, res) {
   res.render('help');
 });
 
+
+router.get('/Database', function(req, res) {
+  res.render('Database');
+});
+
+
 //rutas para registrar a un usuario
 
 router.post('/signup',passport.authenticate('local-signup',{
@@ -84,9 +90,6 @@ router.get('/reset_pass', function(req, res) {
   res.render('reset_pass');
 });
 
-router.get('/homet', function(req, res) {
-  res.render('homet');
-});
 
 function isAuthenticated(req,res,next)
 {
